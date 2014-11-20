@@ -201,6 +201,7 @@ hr.small {
 
 .strengths-item {
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .back{
@@ -226,7 +227,7 @@ hr.small {
 
 .callout h1{
     color:#428bca;
-    background: black;
+
 }
 
 /* Portfolio */

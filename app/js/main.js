@@ -38,18 +38,47 @@
     I want to give each strength its own button and then have it only update the corresponding strength        
 ********************************************/
 
-$('#strengths').on('click', 'button', function () {
-    $('.front').hide(); 
-    $('.back').show();   
 
-    console.log('Element Targeted');
-})
+// $('#strengths').on('click', '.strengths-item', function () {
+    
+// //     // $('.service-item .front').toggleClass('back');
+// //     var back = $(this).text();
+//     var content = $(this).text();
 
-$('.back').on('click', function(){
-    $('.front').show();
-    $('.back').hide();
-})
+// // //     // $(this).hide();
 
+// // //     $(this.back).show();
+// // //     // $('.front').hide();
+// // //     // $('.back').show();   
+
+//     console.log(content);
+// })
+
+$('#strengths').on('click', '.strengths-item p',function(){
+    var $item = $(this);
+    $item.data( 'swap', [ $item.text(), $item.text( $item.data('swap') ) ][0] );
+});
+
+
+
+
+    // console.log($item.text())
+    // if($item.has(".front")){
+    //     $('.front').hide();
+    //     $('.back').show();
+    //     console.log("Front");
+    // }else {
+    //     $('.back').hide();
+    //     $('.front').show();
+    //     console.log("Back");
+    // }
+// })
+
+// $('#strengths').on('click', '.strengths-item',function(){
+//     $('.back').hide();
+//     $('.front').show();
+    
+// })
 
 /*******************************************
 About me
